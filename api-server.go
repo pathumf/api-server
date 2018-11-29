@@ -1,8 +1,12 @@
 package main
 
-import "net/http"
-import "os"
-import "fmt"
+import (
+	"fmt"
+	"net/http"
+	"os"
+
+	"github.com/pathumf/api-server/api"
+)
 
 //TODO import package
 func main() {
