@@ -8,16 +8,15 @@ import (
 	"github.com/pathumf/api-server/api"
 )
 
-//TODO import package
 func main() {
 	http.HandleFunc("/", index)
-	http.HandleFunc("/api/echo/", echo)
+	http.HandleFunc("/api/echo", echo)
 	http.HandleFunc("api/books", api.BooksHandlerFunc)
 	http.ListenAndServe(port(), nil)
 }
 
 func port() string {
-	port := os.Getenv("PATH")
+	port := os.Getenv("PORT")
 	if len(port) == 0 {
 		port = "8080"
 	}
